@@ -14,16 +14,14 @@ class CreateProductsTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->BigIncrements('id_product');
+            $table->increments('id');
             $table->string('name',100);
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->decimal('price',9,2);
-            $table->enum('size',['XS','S','M','L','XL']);
-            $table->string('url_image')->nullable();
+            $table->enum('size',['xs','s','m','l','xl']);
+            $table->string('image_url')->nullable();
             $table->boolean('is_visible');
-            $table->enum('status',['en solde', 'standard']);
-            $table->unsignedInteger('category_id')->nullable();
-            $table->foreign('category_id')->references('id')->on('categories');
+            $table->enum('status',['solde', 'standard']);
             $table->timestamps();
         });
     }
@@ -33,9 +31,8 @@ class CreateProductsTable extends Migration
      *
      * @return void
      */
-    public function down(Blueprint $table)
+    public function down()
     {
-        $table->dropforeign('products_category_id_foreign');
         Schema::dropIfExists('products');
     }
 }

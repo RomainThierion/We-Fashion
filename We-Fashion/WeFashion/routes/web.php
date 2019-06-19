@@ -11,6 +11,21 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', 'FrontController@index');
+Route::get('product/{id}', 'FrontController@show')->where(['id' => '[0-9]+']);
+
+Route::get('solde', function () {
     return view('welcome');
+});
+
+Route::get('homme', function () {
+    return view('welcome');
+});
+
+Route::get('femme', function () {
+    return view('welcome');
+});
+
+Route::get('produit/{id}', function ($id) {
+    return App\Product::find($id);
 });
