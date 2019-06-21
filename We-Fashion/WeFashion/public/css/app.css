@@ -1,5 +1,61 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 
+.itemsParent {
+  height: 100%;
+  width: 100%;
+}
+
+.titleCenter {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.ulItems {
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: center;
+}
+
+.itemsChilds {
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.itemsChilds img {
+  max-width: 280px;
+    margin: auto;
+    display: block;
+}
+
+.itemsChilds p {
+  width: 282px;
+}
+
+.marginElement {
+  margin: 10px 0 0 15px !important;
+  margin: auto;
+  display: block;
+  padding: 0 15px;
+}
+
+.pagination {
+  margin: 20px auto 50px auto !important;
+  width: 300px;
+  padding-left: inherit !important;
+}
+
+.productView {
+  margin: 50px auto;
+}
+
+.productView img {
+  width: 400px;
+}
+
+.footer-row {
+  text-align: center;
+}
+
 /*!
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
