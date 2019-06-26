@@ -12,16 +12,22 @@
 */
 
 
-Route::get('product/{id}', 'FrontControllerr@showProduct')->where(['id' => '[0-9]+']);
+Route::get('product/{id}', 'FrontController@showProduct')->where(['id' => '[0-9]+']);
 
 Route::get('soldes', 'FrontController@solded');
 
-Route::get('homme', function () {
-    return view('welcome');
-});
+Route::get('femme', 'FrontController@women');
+
+Route::get('homme', 'FrontController@men');
 
 Route::get('produit/{id}', function ($id) {
     return App\Product::find($id);
 });
 
 Route::get('/', 'FrontController@index');
+
+Route::resource('admin/product', 'ProductController')->middleware('auth');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -23,14 +23,19 @@
                         <h3 class="footer-heading mb-4">Réseaux sociaux</h3>
                         <ul class="list-unstyled">
                             <li>
-                                <div style="width: 100px;">
-                                    <i class="fab fa-facebook-f"></i>
-                                </div>
-                                <div style="width: 100px;">
-                                    <i class="fab fa-instagram"></i>
-                                </div>
+                                <img class="fit-picture"
+                                      src="{{asset('images/facebook.png')}}"
+                                      alt="facebook" />
                             </li>
-                            <li><a href="#">Inscrivez-vous à la newsletter</a></li>
+
+                            <li>
+                                <img class="fit-picture"
+                                        src="{{asset('images/instagram.png')}}"
+                                        alt="instagram" />
+                            </li>
+                            <li>
+                                <a href="#">Inscrivez-vous à la newsletter</a>
+                            </li>
                         </ul>
                     </div>
                 </div>

@@ -1,11 +1,21 @@
 @extends('layouts.master')
 @section('content')
-    <h1 class="titleCenter">Les derniers articles publiés sur notre site</h1>
+    <h1 class="titleCenter">Articles femme</h1>
 
     <div class="itemsParent">
         <ul class="list-group ulItems" style="flex-direction: row;">
             @forelse($products as $product)
-                @if($product->status === "solde")
+                @if($product->image_url == 'femmes\Wxl-_Port_Jackson-031.jpg' ||
+                    $product->image_url == 'femmes\wxl-stella-guerande-02.jpg' ||
+                    $product->image_url == 'femmes\Wxl-_19PE_juin18_3490.jpg' ||
+                    $product->image_url == 'femmes\wxl-_Carpentie-011.jpg' ||
+                    $product->image_url == 'femmes\wxl-_fideler_antic_blue5.jpg' ||
+                    $product->image_url == 'femmes\wxl-_New_Coleen-006.jpg' ||
+                    $product->image_url == 'femmes\wxl-cala_punta-whiblack-081.jpg' ||
+                    $product->image_url == 'femmes\wxl-seaside-denim_blue-01.jpg' ||
+                    $product->image_url == 'femmes\wxl-santo_amaro-whiblack-04.jpg' ||
+                    $product->image_url == 'femmes\wxl-yagi-roseastripes-05.jpg' 
+                    )
                     <li class="itemsChilds col-md-4 row">                         
                         <div class="col-md-12">
                             <img src="{{asset('images/'.$product->image_url)}}" alt="{{$product->image_url}}">

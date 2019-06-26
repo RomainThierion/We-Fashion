@@ -1,11 +1,21 @@
 @extends('layouts.master')
 @section('content')
-    <h1 class="titleCenter">Les derniers articles publiés sur notre site</h1>
+    <h1 class="titleCenter">Articles homme</h1>
 
     <div class="itemsParent">
         <ul class="list-group ulItems" style="flex-direction: row;">
             @forelse($products as $product)
-                @if($product->status === "solde")
+                @if($product->image_url == 'hommes\0693445251_1_1_1.jpg' ||
+                    $product->image_url == 'hommes\0706301811_1_1_1.jpg' ||
+                    $product->image_url == 'hommes\1792455401_1_1_1.jpg' ||
+                    $product->image_url == 'hommes\3859401732_1_1_1.jpg' ||
+                    $product->image_url == 'hommes\3918402401_1_1_1.jpg' ||
+                    $product->image_url == 'hommes\3918420710_1_1_1.jpg' ||
+                    $product->image_url == 'hommes\4314509658_1_1_1.jpg' ||
+                    $product->image_url == 'hommes\4398519400_1_1_1.jpg' ||
+                    $product->image_url == 'hommes\7505410251_1_1_1.jpg' ||
+                    $product->image_url == 'hommes\9065437707_2_1_1.jpg' 
+                    )
                     <li class="itemsChilds col-md-4 row">                         
                         <div class="col-md-12">
                             <img src="{{asset('images/'.$product->image_url)}}" alt="{{$product->image_url}}">

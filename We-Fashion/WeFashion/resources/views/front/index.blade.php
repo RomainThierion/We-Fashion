@@ -16,16 +16,18 @@
                     </div>
 
                     @if($product->status === "solde")
-                    <div ><strong class="item-price">{{$product->price}} €</strong>
+                    <div class="item-solded"><strong >{{$product->price}} €</strong>
                         <del>1{{$product->price}} €</del>
                     </div>
                     @else
+                    <div class="item-price">
                     <strong class="item-price">{{$product->price}} €</strong>
+                    </div>
                     @endif
 
                 </li>
-            @empty
-                <h3>Aucun produit !</h3>
+                @empty
+                    <h3>Aucun produit !</h3>
             @endforelse
         </ul>
 
